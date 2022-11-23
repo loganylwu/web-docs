@@ -12,41 +12,11 @@ Add **Markdown or React** files to `src/pages` to create a **standalone page**:
 
 ## Create your first React Page
 
-```jsx title="/src/components/HelloCodeTitle.js"
-function HelloCodeTitle(props) {
-  // highlight-next-line
-  return <h1>你好，{props.name}</h1>;
-}
-```
-
 Create a file at `src/pages/my-react-page.js`:
 
-```jsx live
-function Clock(props) {
-  const [date, setDate] = useState(new Date());
-  useEffect(() => {
-    const timerID = setInterval(() => tick(), 1000);
-
-    return function cleanup() {
-      clearInterval(timerID);
-    };
-  });
-
-  function tick() {
-    setDate(new Date());
-  }
-
-  return (
-    <div>
-      <h2>现在是 {date.toLocaleTimeString()}。</h2>
-    </div>
-  );
-}
-```
-
 ```jsx title="src/pages/my-react-page.js"
-import React from "react";
-import Layout from "@theme/Layout";
+import React from 'react';
+import Layout from '@theme/Layout';
 
 export default function MyReactPage() {
   return (
